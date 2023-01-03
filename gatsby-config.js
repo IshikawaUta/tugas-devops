@@ -7,9 +7,9 @@
 module.exports = {
     siteMetadata: {
         title: 'Siap Kerja, Santun, Mandiri dan Kreatif',
-        logo: '/images/logo.webp',
+        logo: '/images/logo.png',
         siteUrl: 'https://smkbhaktipertiwi-tng.sch.id/',
-        mobLogo: '/images/moblogo.webp',
+        mobLogo: '/images/moblogo.png',
         description:
             'SMK Bhakti Pertiwi Kota Tangerang, Siap kerja, Santun, Mandiri dan Kreatif.',
         currentPlacementYear: 2022,
@@ -51,12 +51,12 @@ module.exports = {
                 link: '/programs',
                 children: [
                     {
-                        name: 'Akuntansi Keuangan Lembaga',
-                        link: '/programs/akuntansi-keuangan'
+                        name: 'Tata Busana (Garmen)',
+                        link: '/programs/tata-busana-garmen'
                     },
                     {
-                        name: 'Otomatisasi Tata Kelola Perkantoran',
-                        link: '/programs/administrasi-perkantoran'
+                        name: 'Bisnis Daring dan Pemasaran (Online)',
+                        link: '/programs/bisnis-daring-pemasaran'
                     },
                     {
                         name: 'Teknik Komputer Jaringan',

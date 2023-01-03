@@ -2,8 +2,8 @@ import React from 'react';
 import { graphql } from 'gatsby';
 import Img from 'gatsby-image';
 import marked from 'marked';
-import MD from 'gatsby-custom-md';
-import Faculties from '../components/faculties';
+//import MD from 'gatsby-custom-md';
+//import Faculties from '../components/faculties';
 import Layout from '../components/layout';
 import { Row, Col, Fl, Box } from '../components/custom';
 import '../style/single-page.less';
@@ -53,7 +53,7 @@ export default ({ data }) => {
                     <div className="row">
                         <div className="col s12 m6">
                             <p className="font-2">
-                                <b>Vision</b>
+                                <b>Visi</b>
                             </p>
                             <div
                                 dangerouslySetInnerHTML={{
@@ -68,7 +68,7 @@ export default ({ data }) => {
                         </div>
                         <div className="col s12 m6">
                             <p className="font-2">
-                                <b>Mission</b>
+                                <b>Misi</b>
                             </p>
                             <div
                                 dangerouslySetInnerHTML={{
@@ -82,7 +82,8 @@ export default ({ data }) => {
                             />
                         </div>
                     </div>
-                    {data.hod.edges.length > 0 &&
+                    
+                    {/* {data.hod.edges.length > 0 &&
                         <div>
                             <h3>Head of the Department</h3>
                             <Faculties data={data.hod} />
@@ -94,7 +95,8 @@ export default ({ data }) => {
                     <h3>Faculty</h3>
                     <Faculties data={data.faculties}/>
                     <h3>Technical Staffs</h3>
-                    <Faculties data={data.technical}/>
+                    <Faculties data={data.technical}/> */}
+                    
                 </div>
             </div>
         </Layout>

@@ -5,7 +5,7 @@ import Programs from '../components/programs';
 const meta = {
     title: 'Programs',
     description:
-        'Tiga program atau jurusan SMK Bhakti Pertiwi Kota Tangerang',
+        'Tiga program atau jurusan SMK Bina Mandiri Kabupaten Tangerang',
     keywords: 'Programs'
 };
 
