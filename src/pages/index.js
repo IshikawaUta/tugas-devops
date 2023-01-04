@@ -15,7 +15,7 @@ export default class props extends React.Component {
     componentDidMount() {}
     render() {
         return (
-            <Layout meta={{ title: 'SMK Bhakti Pertiwi, Kota Tangerang' }}>
+            <Layout meta={{ title: 'SMK Bina Mandiri Kutabumi, Tangerang' }}>
                 <Wall />
                 <Welcome />
                 <div
