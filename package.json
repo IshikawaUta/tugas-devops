@@ -10,7 +10,7 @@
     "clean": "gatsby clean",
     "develop": "gatsby develop",
     "format": "prettier --write src/**/*.{js,jsx}",
-    "start": "npm run develop",
+    "start": "npm run develop --openssl-legacy-provider start", 
     "serve": "gatsby serve",
     "test": "echo \"Write tests! -> https://gatsby.dev/unit-testing\"",
     "prettier": "prettier --write **/*.{ts,js,css,html}"
