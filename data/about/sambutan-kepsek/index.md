@@ -2,7 +2,7 @@
 title: Sambutan Kepala Sekolah
 template: singlepage
 image: ./kepsek-smk-bima.png
-description: "Sambutan kepala sekolah SMK Bhakti Pertiwi Kota Tangerang."
+description: "Sambutan kepala sekolah SMK Bima Kutabumi Tangerang."
 ---
 ![The Principal](./kepsek-smk-bima.png)
 

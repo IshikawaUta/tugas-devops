@@ -6,12 +6,12 @@
 
 module.exports = {
     siteMetadata: {
-        title: 'Siap Kerja, Santun, Mandiri dan Kreatif',
+        title: 'Unggul, kreatif dan siap kerja',
         logo: '/images/logo.png',
-        siteUrl: 'https://smkbhaktipertiwi-tng.sch.id/',
+        siteUrl: 'https://smkbimakutabumi.sch.id/',
         mobLogo: '/images/moblogo.png',
         description:
-            'SMK Bhakti Pertiwi Kota Tangerang, Siap kerja, Santun, Mandiri dan Kreatif.',
+            'SMK Bima Mandiri Kutabumi Tangerang, Unggul dan Kreatif.',
         currentPlacementYear: 2022,
         navLinks: [
             {
