@@ -1,11 +1,11 @@
 ---
-title: SMK Bhakti Pertiwi Kota Tangerang
+title: SMK Bina Mandiri Kutabumi Tangerang
 template: singlepage
-description: SMK Bhakti Pertiwi Kota Tangerang Siap kerja.
+description: SMK Bina Mandiri Kutabumi Tangerang Siap kerja.
 image: ./kunjungan-industri.jpg
 ---
 
-**SMK Bhakti Pertiwi Kota Tangerang**, merupakan tempat belajar yang menyiapkan anak didiknya siap kerja, santun mandiri dan kreatif.
+**SMK Bina Mandiri Kutabumi Tangerang**, merupakan tempat belajar yang menyiapkan anak didiknya siap kerja, santun mandiri dan kreatif.
 
 <div style="text-align: center;">
 <h2>Tujuan Sekolah</h2>
