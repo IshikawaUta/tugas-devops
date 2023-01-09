@@ -74,7 +74,7 @@ module.exports = {
                         link: '/facilities/ccf'
                     },
                     {
-                        name: 'Lainnya',
+                        name: 'Lainya',
                         link: '/facilities/other'
                     }
                 ]

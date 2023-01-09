@@ -78,7 +78,7 @@ export default ({tag}) => {
                             </div>
                             <div className="col s12 m7">
                                 <iframe
-                                    src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d15865.936374623629!2d106.6167371!3d-6.1996856!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x64997178f030796c!2sSMK%20Bhakti%20Pertiwi!5e0!3m2!1sen!2sid!4v1672029415599!5m2!1sen!2sid"
+                                    src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d15867.475329914421!2d106.5711047!3d-6.1483129!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x3ff5c75f803565fe!2sSMK%20BINA%20MANDIRI%20KAB.TANGERANG!5e0!3m2!1sen!2sid!4v1673130844584!5m2!1sen!2sid"
                                     width="100%"
                                     height="450"
                                     frameBorder="0"

@@ -71,7 +71,7 @@ export default () => {
                 </div>
             </div>
             <div id="copyright">
-                <p>Copyright &copy; SMK Bhakti Pertiwi Kota Tangerang</p>
+                <p>Copyright &copy; SMK Bina Mandiri Kutabumi Tangerang</p>
             </div>
             <div dangerouslySetInnerHTML={{ __html: '<!-- This website was created by students of CEK during the year 2019-2020. The team included, Akshay U - S5 CS, Samanyu S Neelson - S7 EI, Akhil M P - S7 CS and Athul C A - S3 CS   -->' }} />
         </React.Fragment>

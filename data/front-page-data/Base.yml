@@ -53,8 +53,8 @@
             #- name: Moodle
             #  url: https://moodle.smkbima.sch.id
 
-            - name: Institution Documents
-              url: /
+            - name: Landingpage Promosi
+              url: https://landing.smkbimakutabumi.sch.id
               #url: /quicklinks/instdoc
 
             - name: STUDENT CORNER
@@ -73,16 +73,16 @@
               url: /
               #url: /quicklinks/alumini
 
-            - name: Media sosial IG SMK Bhakti Pertiwi
-              url: https://www.instagram.com/smkbhaktipertiwi_tng
+            - name: Media sosial IG SMK Bina Mandiri Kutabumi
+              url: /
 
             #- name: MANDATORY DISCLOSURE
             #  url: /quicklinks/mandatorydisclosure
             #- name: RIGHT TO INFORMATION ACT
             #  url: /quicklinks/rti
         col3:
-            - name: Media sosial FB SMK Bhakti Pertiwi
-              url: https://www.facebook.com/esemka.tangerang
+            - name: Media sosial FB SMK Bina Mandiri Kutabumi
+              url: /
 
             #- name: NIRF
             #  url: /quicklinks/NIRF
