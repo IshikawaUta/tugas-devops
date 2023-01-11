@@ -5,26 +5,19 @@ description: SMK Bina Mandiri Kutabumi Tangerang Siap kerja.
 image: ./kunjungan-industri.jpg
 ---
 
-**SMK Bina Mandiri Kutabumi Tangerang**, merupakan tempat belajar yang menyiapkan anak didiknya siap kerja, santun mandiri dan kreatif.
-
-<div style="text-align: center;">
-<h2>Tujuan Sekolah</h2>
-</div>
-
-* Mempersiapkan peserta didik yang beriman dan bertakwa kepada Tuhan yang Mahasa Esa, berintegritas, dan berkepribadian mulia.
-* Mempersiapakan peserta didik agar menjadi manusia kreatif. 
+**SMK Bina Mandiri Kutabumi Tangerang**, Sekolah Kejuruan Vokasi siap trampil, cerdas, berilmu, profesional dan mandiri.
 
 <div style="text-align: center;">
 <h2>Visi</h2>
 </div>
-
-Meningkatkan kualitas pendidikan yang terampil, berdaya saing, Berkarakter Imtaq dan Iptek.
-
+Membentuk sumber daya manusia yang berwawasan global dengan mencetak tenaga trampil, cerdas, berilmu, profesional, dan mandiri.
 <div style="text-align: center;">
 <h2>Misi</h2>
 </div>
 
-* Menumbuhkan mentalitas, sikap dan kepribadian mulia melalui penerapan kedisiplinan, kejujuran dan penghargaan terhadap profesionalisme dan integritas.
-* Mengembangkan nilai-nilai solidaritas, toleransi dan kepedulian yang tinggi terhadap sesama dan lingkungan.
-* Menyelenggarakan kegiatan pembelajaran, pelatihan dan bimbingan secara eefektif dan holistik dengan menerapkan pendekatan saintifik yang kreatif dan inovatif disertai upaya-upaya perbaikan yang berkesinambungan.
-* Membina dan meningkatkan pengetahuan, keterampilan dan kompetensi profesional peserta didik yang akan menghasilkan lulusan yang berdaya guna di dunia Usaha dan dunia Industri (DU/DI) dan masyarakat.
+* Menyiapkan generasi unggul yang memiliki potensi dibidang IMTAQ dan IPTEK.
+* Membentuk sumber daya yang kreatif, inovatif sesuai dengan perkembangan zaman.
+* Membentuk sumber daya yang cerdas, profesional dan mandiri.
+* Menciptakan sekolah sebagai sarana pendidikan yang berkualitas.
+* Menjalin kerjasama yang harmonis antara warga sekolah dan lingkungan sekolah.
+* Mengembangkan proses belajar mengajar yang bernuansa agamis.
