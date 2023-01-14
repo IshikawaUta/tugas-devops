@@ -1,15 +1,17 @@
 ---
 title: Pendaftaran
 template: singlepage
-description: SMK Bhakti Pertiwi Kota Tangerang setiap tahunnya menerima siswa/i baru dengan persyaratan yang ditentukan oleh pihak sekolah.
+description: SMK Bina Mandiri Kutabumi Tangerang setiap tahunnya menerima siswa/i baru dengan persyaratan yang ditentukan oleh pihak sekolah.
 ---
 
-<h3>SMK Bhakti Pertiwi Kota Tangerang setiap tahunnya menerima siswa/i baru </h3>
+<h3>SMK Bina Mandiri Kutabumi Tangerang setiap tahunnya menerima siswa/i baru </h3>
 <br>
 
-**Silahkan download brosur SMK Bhakit Pertiwi Kota tangerang yang sudah disedikan pada link di bawah ini, anda juga dapat melihat dan menelusuri informasi di web ini.**<br>
-[Klik di sini untuk lihat dan download brosur halaman 1](brosur1.pdf)<br><br>
-[Klik di sini untuk lihat dan download brosur halaman 2](brosur2.pdf)<br><br>
+**Silahkan download brosur SMK Bina Mandiri Kutabumi tangerang yang sudah disedikan pada link di bawah ini, anda juga dapat melihat dan menelusuri informasi di web ini.**<br>
+[Klik di sini untuk lihat dan download brosur 1](brosur1.pdf)<br><br>
+[Klik di sini untuk lihat dan download brosur 2](brosur2.pdf)<br><br>
+[Klik di sini untuk lihat dan download flyer](flyer-ppdb.pdf)<br><br>
+
 <!--
 **Applications are invited for admission to the B.Tech Management Quota Seats (2020-21) reserved for children of Co-operative Sector employees in CAPE Engineering Colleges.**<br>
 For more details and vaccancy position please call **Admission Help line Number:- 9188255056**<br><br>
