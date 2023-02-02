@@ -1,14 +1,14 @@
 ---
-title: Lomba Merakit PC
-image: ./lomba-merakit-pc.jpg
+title: Lomba Nari SMK Bina Mandiri Kutabumi
+image: ./lomba-nari-smk-bima.jpg
 template: singlepage
-description:  Siswa SMK Bhakti Pertiwi Kota Tangerang mengikut lomba merakit PC yang diadakan oleh kampus UMT kota Tangerang.
+description:  Siswa SMK Bina Mandiri Kutabumi Pasar Kemis Kabupaten Tangerang mengikuti lomba tari.
 ---
 
-Untuk meningkatkan skill dan kompetensi serta pengalaman siswa, SMK Bhakti Peritiwi Kota Tangerang mengirim tim untuk mengikut lomba merakit PC yang diwakili oleh jurusan Teknik komputer Jaringan.
+Untuk meningkatkan skill dan kompetensi serta pengalaman siswa, SMK Bina Mandiri Kutabumi Tangerang mengirim tim untuk mengikut lomba merakit menari yang diwakili oleh para siswa SMK.
 
 [row]
 [col]
-![lomba](lomba-merakit-pc.jpg)
+![lomba](lomba-nari-smk-bima.jpg)
 [/col]
 [/row]
