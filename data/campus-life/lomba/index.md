@@ -1,5 +1,5 @@
 ---
-title: Lomba Nari SMK Bina Mandiri Kutabumi
+title: Lomba Nari SMK Bina Mandiri Kutabumi tahun 2022
 image: ./lomba-nari-smk-bima.jpg
 template: singlepage
 description:  Siswa SMK Bina Mandiri Kutabumi Pasar Kemis Kabupaten Tangerang mengikuti lomba tari.
