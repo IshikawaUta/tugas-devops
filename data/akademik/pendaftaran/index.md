@@ -10,7 +10,7 @@ description: SMK Bina Mandiri Kutabumi Tangerang setiap tahunnya menerima siswa/
 **Silahkan download brosur SMK Bina Mandiri Kutabumi tangerang yang sudah disedikan pada link di bawah ini, anda juga dapat melihat dan menelusuri informasi di web ini.**<br>
 [Klik di sini untuk lihat info lebih lanjut](https://heylink.me/ppdbbima)<br><br>
 [Klik di sini untuk lihat mendaftar sekolah SMK BINA MANDIRI](https://docs.google.com/forms/d/e/1FAIpQLScwFHTMGuqWSe-W58Z8TSpUBaycrQYj-k1G68AtZD6f9V0IrQ/viewform)<br><br>
-[Klik di sini untuk lihat dan download flyer](flyer-ppdb.pdf)<br><br>
+[Klik di sini](Sekolah.PNG)<br><br>
 
 <!--
 **Applications are invited for admission to the B.Tech Management Quota Seats (2020-21) reserved for children of Co-operative Sector employees in CAPE Engineering Colleges.**<br>
