@@ -8,7 +8,7 @@ export default ({ title }) => {
                 <title>{title}</title>
                 <link rel="icon" href="/images/favicon.png" type="image/png" />
                 <link
-                    href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:400,700&display=swap"
+                    href="https://fonts.googleapis.com/css?family=Quicksand:400,500,700&display=swap"
                     rel="stylesheet"
                 />
                 <link
