@@ -1,12 +1,16 @@
+/* wall.css */
 @import "color";
 
 .wall{
     display: flex;
+    height: 55vh; /* Full viewport height */
 
     :global{
         .welcome-slider{
             width: 65%;
-            height: 100%;
+            height: 95%;
+            border-radius: 0 15px 15px 0; /* Rounded right corner for slider */
+            overflow: hidden; /* Ensure content is clipped */
         }
 
         .carousel-item{
@@ -18,19 +22,30 @@
                 left: 0;
                 width: 100%;
                 height: 100%;
-                background: rgba(0,0,0,.5);
+                background: rgba(0,0,0,.6); /* Darker overlay */
+                display: flex; /* Use flex to center description */
+                align-items: flex-end; /* Align to bottom */
+                justify-content: flex-end; /* Align to right */
+                padding: 42px;
+            }
 
-                .description{
-                    position: absolute;
-                    bottom: 52px;
-                    right: 0;
-                    height: auto;
-                    padding: 42px;
-                    text-align: right;
-
-                    h3, div{
-                        color: #eee;
-                    }
+            .description{
+                bottom: 52px;
+                right: 0;
+                height: auto;
+                text-align: right;
+                max-width: 70%; /* Limit width of description */
+                color: #eee;
+                
+                h3{
+                    font-size: 1.5em; /* Larger heading */
+                    color: #ffffff;
+                    margin-bottom: 10px;
+                    text-shadow: 2px 2px 5px rgba(0,0,0,0.5); /* Text shadow for readability */
+                }
+                div{
+                    font-size: 1.1em;
+                    line-height: 1.6;
                 }
             }
         }
@@ -42,31 +57,41 @@
         }
 
         .slick-dots{
-            bottom: 12px;
-        }
-
-        .slick-dots li button:before{
-            content: "";
-            border-radius: 50%;
-            background: #888;
-            width: 8px;
-            height: 8px;
-            box-shadow: 0px 0px 0px 1px #fff;
+            bottom: 20px; /* More space from bottom */
+            li button:before{
+                content: "";
+                border-radius: 50%;
+                background: rgba(255,255,255,0.6); /* Lighter dots */
+                width: 10px; /* Larger dots */
+                height: 10px;
+                box-shadow: 0px 0px 0px 2px @textInverted; /* Clearer white border */
+                transition: all 0.3s ease;
+            }
+            li.slick-active button:before{
+                background: @textInverted; /* Solid white for active dot */
+            }
         }
 
         .announcements{
-            background: lighten(@secondaryColor, 36%);
-            padding: 12px;
+            background: lighten(@secondaryColor, 30%); /* Lighter background for announcements section */
+            padding: 20px; /* More padding */
             overflow: auto;
-            width: 100%;
+            width: 50%; /* Fixed width for announcements */
+            height: 95%;
+            border-radius: 15px 0 0 15px; /* Rounded left corner for announcements */
+            box-shadow: -5px 0 15px rgba(0,0,0,0.1);
 
             .title-strip{
                 background: @background;
-                padding: 12px;
-                border-radius: 5px;
+                padding: 15px; /* More padding */
+                border-radius: 8px; /* Rounded corners */
+                margin-bottom: 15px; /* Space below title */
+                box-shadow: 0 2px 5px rgba(0,0,0,0.05);
 
                 a{
-                    font-size: .8em;
+                    font-size: .9em;
+                    font-weight: bold;
+                    color: @primaryColor;
                 }
             }
 
@@ -76,14 +101,15 @@
 
                 li{
                     margin: 10px 0;
-                    padding: 12px;
-                    box-shadow: 1px 1px 10px -4px rgba(0,0,0,.2);
+                    padding: 15px; /* More padding */
+                    box-shadow: 1px 1px 8px -4px rgba(0,0,0,.2);
                     border: 0;
-                    border-radius: 1px;
+                    border-radius: 8px; /* Rounded corners */
                     background: @background;
-                    transition: box-shadow 0.25s;
+                    transition: transform 0.3s ease-in-out, box-shadow 0.3s;
                     overflow: hidden;
                     text-overflow: ellipsis;
+                    white-space: nowrap; /* Keep content on one line */
 
                     &.imp {
                         border-left: 8px solid @primaryColor;
@@ -94,7 +120,8 @@
                     }
 
                     &:not(.collection-header):hover {
-                        box-shadow: 2px 3px 10px -3px rgba(0,0,0,.4);
+                        box-shadow: 2px 3px 12px -3px rgba(0,0,0,.4);
+                        transform: translateX(5px); /* Slide effect on hover */
                     }
                 }
             }
@@ -102,12 +129,13 @@
     }
 }
 
-.announcements{
-    background: @primaryColor;
+.announcements{ /* This refers to the scrolling announcement strip */
+    background: linear-gradient(90deg, @navbarGradientStart, @navbarGradientEnd); /* Gradient background */
 	color: #fff;
 	padding-left: 40px;
 	overflow: hidden;
 	position:relative;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.1);
 
     :global{
     	.ico{
@@ -115,11 +143,11 @@
     		left: 10px;
     		top:50%;
     		transform: translate(0,-50%);
+            font-size: 1.5em;
     	}
     	.strip{
     		overflow: hidden;
     	}
-
     }
 
     ul{
@@ -127,9 +155,11 @@
         white-space: nowrap;
         li{
             display: inline-block;
-	    margin: 12px 16px;
+	        margin: 12px 20px; /* More spacing */
+            font-size: 1.1em;
+            text-shadow: 1px 1px 3px rgba(0,0,0,0.3); /* Text shadow */
         }
-        animation:move 30s linear infinite;
+        animation:move 30s linear infinite; /* Keep existing animation */
     }
     &:hover ul{
         animation-play-state:paused;
@@ -153,14 +183,30 @@
         :global {
             .welcome-slider{
                 width: 100%;
+                border-radius: 15px; /* Full rounded corners for mobile */
             }
 
             .announcements{
-                height: 512px;
+                height: auto; /* Adjust height dynamically */
+                width: 100%;
+                margin-top: 20px;
+                border-radius: 15px; /* Full rounded corners for mobile */
             }
 
             .carousel-item .overlay .description{
                 bottom: 10px;
+                padding: 20px; /* Adjust padding for mobile */
+                max-width: 90%;
+                text-align: center; /* Center text for mobile */
+                h3 {
+                    font-size: 1em;
+                }
+                div {
+                    font-size: 0.9em;
+                }
+            }
+            .carousel-item .overlay {
+                justify-content: center; /* Center for mobile */
             }
         }
     }

@@ -1,37 +1,56 @@
+/* placement.css */
 @import "color";
 
 .placement{
     .btns{
         padding: 22px;
+        text-align: center; /* Center buttons */
 
         .btn{
             margin: 12px;
-            
+            border-radius: 25px; /* Pill-shaped buttons */
+            padding: 10px 25px;
+            transition: all 0.3s ease; /* Smooth transition */
+            border: 2px solid @primaryColor; /* Clearer border */
+            color: @primaryColor;
+            background: transparent;
+
             &.active{
                 background: @primaryColor;
                 color: #fff;
+                box-shadow: 0 5px 15px rgba(0,0,0,0.2);
+            }
+            &:hover:not(.active){
+                background: lighten(@primaryColor, 40%); /* Lighter primary on hover */
+                color: @primaryColor;
+                transform: translateY(-3px); /* Lift effect */
             }
         }
     }
 }
-
 
 .placement-item{
     flex: 0 0 auto;
     padding: 22px;
 
     .box{
-        box-shadow: 2px 2px 8px -4px rgba(0,0,0,.2);
+        box-shadow: 2px 2px 10px -4px rgba(0,0,0,.3); /* Stronger shadow */
         position: relative;
-        transition: box-shadow .25s;
+        transition: transform 0.3s ease-in-out, box-shadow 0.5s; /* Added transform for hover */
+        border-radius: 10px; /* Rounded corners */
+        overflow: hidden;
 
         &:hover{
-            box-shadow: 2px 4px 8px -3px rgba(0,0,0,.3);
+            box-shadow: 3px 3px 15px -3px rgba(0,0,0,.4); /* Stronger shadow on hover */
+            transform: translateY(-8px); /* Lift effect */
         }
 
         .description{
-            padding: 12px;
+            padding: 15px; /* More padding */
             background: #fff;
+            color: @textBold;
+            font-size: 1.05em;
+            text-align: center;
         }
 
         .overlay-link{
@@ -43,21 +62,30 @@
             opacity: 0;
         }
     }
-    
 }
 
 .student{
     padding: 22px;
 
     .box{
-        box-shadow: 2px 2px 8px -4px rgba(0,0,0,.2);
+        box-shadow: 2px 2px 10px -4px rgba(0,0,0,.3); /* Stronger shadow */
+        border-radius: 10px; /* Rounded corners */
+        overflow: hidden;
+        transition: transform 0.3s ease-in-out, box-shadow 0.5s; /* Added transform for hover */
+
+        &:hover{
+            box-shadow: 3px 3px 15px -3px rgba(0,0,0,.4); /* Stronger shadow on hover */
+            transform: translateY(-8px); /* Lift effect */
+        }
 
         .description{
-            padding: 12px;
+            padding: 15px; /* More padding */
             background: #fff;
+            color: @textBold;
 
             p{
-                margin: 4px 0;
+                margin: 6px 0; /* More margin for paragraphs */
+                font-size: 0.95em;
             }
         }
     }

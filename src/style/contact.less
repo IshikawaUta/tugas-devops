@@ -1,3 +1,4 @@
+/* contact.less */
 @import "color";
 
 #contact {
@@ -8,11 +9,22 @@
 
         input, textarea{
             background: transparent;
+            border-bottom: 2px solid @lightGrey; /* More prominent input border */
+            transition: border-color 0.3s ease;
+            &:focus {
+                border-color: @primaryColor; /* Highlight on focus */
+                outline: none;
+            }
         }
     }
 
     .btn {
         margin-top: 20px;
+        transition: all 0.3s ease; /* Smooth transition for buttons */
+        &:hover {
+            transform: scale(1.05); /* Slightly enlarge button on hover */
+            box-shadow: 0 5px 15px rgba(0,0,0,0.2); /* Add shadow to button */
+        }
     }
 
     .infos {
@@ -21,6 +33,10 @@
 
         .info {
             margin: 22px 0;
+            transition: transform 0.3s ease-out;
+            &:hover {
+                transform: translateX(10px); /* Slide effect on hover */
+            }
         }
 
         .ico {
@@ -29,12 +45,14 @@
             margin-top: 5px;
             vertical-align: top;
             color: @primaryColor;
+            font-size: 1.5em; /* Larger icons */
+            transition: color 0.3s ease;
         }
 
         .data {
             display: inline-block;
             vertical-align: top;
-            color: #777;
+            color: @textPrimary; /* Use textPrimary for better readability */
 
             p {
                 margin: 0;
@@ -53,4 +71,6 @@
 
 #map iframe {
     display: block;
+    border-radius: 10px; /* Rounded corners for map */
+    box-shadow: 0 5px 15px rgba(0,0,0,0.1);
 }

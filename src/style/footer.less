@@ -1,24 +1,45 @@
+/* footer.css */
 @import "color";
 
 #footer{
-	background: lighten(@primaryColor, 45%);
+	background: linear-gradient(90deg, @navbarGradientStart, @navbarGradientEnd); /* Gradient background */
+    color: @textInverted; /* White text for better contrast */
+    padding: 40px 0; /* More vertical padding */
 
 	ul{
 		list-style: none;
+        padding: 0; /* Remove default padding */
 
 		li{
-			margin:22px 0;
+			margin:15px 0; /* Adjusted margin */
 			a{
-				font-size:18px;
+				font-size:16px; /* Slightly smaller font */
 				text-transform:uppercase;
+                color: @textInverted;
+                text-decoration: none;
+                transition: color 0.3s ease, transform 0.3s ease;
+                &:hover {
+                    color: lighten(@textInverted, 10%); /* Lighter on hover */
+                    transform: translateX(5px); /* Slight slide on hover */
+                }
 			}
 		}
 	}
+    .container {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-around;
+        text-align: center;
+    }
+    .col {
+        padding: 15px;
+    }
 }
 
 #copyright{
-	background: @primaryColor;
-	padding: 10px;
+	background: darken(@navbarGradientStart, 10%); /* Darker shade of primary for copyright */
+	padding: 15px; /* More padding */
 	text-align: center;
 	color: #fff;
+    font-size: 0.9em;
 }

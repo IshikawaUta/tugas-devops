@@ -1,15 +1,19 @@
+/* style.less */
 @fontColor : #667;
 @alternateFont : #fff;
 @fontBoldColor : #222;
-@primaryColor : #3824aa;
-@secondaryColor : #42a5f5;
+@primaryColor : #6A1B9A; /* Ungu */
+@secondaryColor : #2196F3; /* Biru */
 @lightGrey : #eceff1;
 @sectionColor : #f9f9ff;
 @lightGreenGray : #f1f8e9;
+@navbarGradientStart: #6A1B9A; /* Ungu */
+@navbarGradientEnd: #2196F3;   /* Biru */
 
 body{
-	font-family:"Open Sans",sans-serif;
+	font-family: 'Quicksand', sans-serif; /* Mengubah font menjadi Quicksand */
 	color:@fontColor;
+    line-height: 1.7; /* Improved readability */
 }
 
 body.page{
@@ -17,32 +21,33 @@ body.page{
 }
 
 h1,h2,h3,h4,h5,h6{
-	font-weight:800;
+	font-weight:700; /* Quicksand memiliki weight 400, 500, 700. Gunakan 700 untuk bold. */
 	color:@fontBoldColor;
+    margin-bottom: 15px; /* Add margin to headings */
 }
 
 h1{
-	font-size: 3rem;
+	font-size: 3.5rem; /* Slightly larger */
 }
 
 h2{
-	font-size: 2.6rem;
+	font-size: 3rem; /* Slightly larger */
 }
 
 h3{
-	font-size: 2rem;
+	font-size: 2.5rem; /* Slightly larger */
 }
 
 h4{
-	font-size: 1.7rem;
+	font-size: 2rem;
 }
 
 h5{
-	font-size: 1.5rem;
+	font-size: 1.8rem;
 }
 
 h6{
-	font-size: 1.2rem;
+	font-size: 1.4rem;
 }
 
 b{
@@ -53,13 +58,13 @@ b{
 }
 
 strong{
-	font-weight: bold;
+	font-weight: 700; /* Pastikan strong juga menggunakan weight 700 */
 }
 
 
 ol{
 	padding: 0;
-	padding-left: 15px;
+	padding-left: 20px; /* More padding */
 }
 
 p{
@@ -68,13 +73,16 @@ p{
 
 img{
 	max-width: 100%;
+    height: auto;
+    display: block; /* Ensure images are block level */
 }
 
 .page-contents ul li, .allow-list-style ul li {
 	margin: 10px 0;
 	margin-left: 25px;
 	position: relative;
-	list-style: circle;
+	list-style: disc; /* Use disc for standard list style */
+    color: @textPrimary;
 }
 
 .page-contents ul.no-style li{
@@ -83,13 +91,21 @@ img{
 
 .btn{
 	background: @secondaryColor;
+    border-radius: 8px; /* Slightly more rounded buttons */
+    padding: 10px 25px; /* More padding */
+    font-weight: 600;
+    color: @textInverted;
 	&:hover{
 		background: darken(@secondaryColor, 10%);
+        transform: translateY(-3px); /* Lift effect */
+        box-shadow: 0 5px 15px rgba(0,0,0,0.2);
 	}
+    transition: all 0.3s ease;
 }
 
 .font-2{
-	font-size:1.2em;
+	font-size:1.3em; /* Slightly larger */
+    font-weight: 600;
 }
 
 .v-center{
@@ -107,13 +123,14 @@ img{
 .top{
 	padding:20px;
 	padding-bottom: 10px;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.05); /* Subtle shadow */
 	&>.row{
 		margin-bottom: 0;
 	}
 	.item{
 		position:relative;
 		padding:10px;
-		color:#777;
+		color:@textPrimary; /* Use textPrimary */
 		img{
 			width:85%;
 		}
@@ -122,6 +139,7 @@ img{
 			top:15px;
 			left:10px;
 			color:@primaryColor;
+            font-size: 1.3em;
 		}
 		&> div{
 			padding-left:20px;
@@ -135,7 +153,7 @@ img{
 					font-size: 1em;
 					letter-spacing:1px;
 					text-transform:uppercase;
-					color:@primaryColor;
+					color:@textBold; /* Use textBold */
 					margin-bottom: 10px;
 				}
 				p{
@@ -144,13 +162,16 @@ img{
 			}
 		}
 		a{
-			color:@fontColor;
+			color:@textPrimary;
 		}
 	}
 }
 
 nav{
 	text-align: center;
+    background: linear-gradient(90deg, @navbarGradientStart, @navbarGradientEnd); /* Blue-purple gradient */
+    box-shadow: 0 4px 10px rgba(0,0,0,0.2); /* More prominent shadow for navbar */
+    z-index: 1000;
 	&.fixed{
 		position: fixed;
 		top: 0;
@@ -159,21 +180,38 @@ nav{
 	}
 	ul li a{
 		outline: 0;
+        color: @textInverted;
+        font-weight: 600;
+        text-transform: uppercase;
+        padding: 0 20px;
+        transition: background 0.3s ease, color 0.3s ease;
 	}
 	#nav-mobile{
 		display:inline-block;
 	}
+    ul li:hover{
+        background: rgba(255,255,255,0.1);
+    }
+    ul li a:hover, ul li a.active{
+        background: rgba(255,255,255,0.15);
+        color: lighten(@textInverted, 10%);
+    }
 }
 
 .dropdown-content{
-	background: darken(@primaryColor,5%);
+	background: darken(@navbarGradientStart,5%); /* Darker shade of gradient start */
+    border-radius: 0 0 8px 8px;
+    overflow: hidden;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.3);
 	li{
 		a{
-			color: #fff;
+			color: @textInverted;
 			outline: 0;
+            padding: 15px 20px;
+            transition: background 0.25s ease, color 0.25s ease;
 		}
 		&:hover{
-			background: rgba(0,0,0,.05);
+			background: rgba(0,0,0,.1); /* Darker overlay on hover */
 		}
 	}
 }
@@ -183,6 +221,7 @@ nav{
 		position: relative;
 		width: 100%;
 		opacity: 1;
+        background: transparent; /* Keep transparent for mobile side nav */
 	}
  	img{
 		width:100%;
@@ -190,9 +229,9 @@ nav{
 }
 
 .sidenav li > p{
-	color: rgba(0,0,0,0.87);
+	color: @textPrimary; /* Use textPrimary */
     display: block;
-    font-size: 14px;
+    font-size: 16px;
     font-weight: 500;
     padding: 0 32px;
     span{
@@ -204,7 +243,8 @@ nav{
 	display: block !important;
 	img{
 		max-height: 500px;
-	    object-fit: fill !important;
+	    object-fit: cover !important; /* Ensure images cover the area */
+        border-radius: 10px;
 	}
 	.gatsby-image-wrapper{
 		& > div{
@@ -231,16 +271,18 @@ nav{
 }
 
 #announcements-strip{
-	background: @primaryColor;
+	background: linear-gradient(90deg, @navbarGradientStart, @navbarGradientEnd); /* Gradient background */
 	color: #fff;
 	padding-left: 40px;
 	overflow: hidden;
 	position:relative;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.1);
 	.ico{
 		position:absolute;
 		left: 10px;
 		top:50%;
 		transform: translate(0,-50%);
+        font-size: 1.5em; /* Larger icon */
 	}
 	.strip{
 		overflow: hidden;
@@ -250,6 +292,8 @@ nav{
 		white-space: nowrap;
 		li{
 			display: inline-block;
+            padding: 12px 16px; /* Added padding for readability */
+            font-size: 1.05em;
 		}
 		animation:move 30s linear infinite;
 	}
@@ -268,12 +312,13 @@ nav{
 }
 
 .section{
-	padding:40px 0;
+	padding:60px 0; /* More padding */
 	.contents{
 		padding-top:50px;
 	}
 	.title{
 		text-align:center;
+        margin-bottom: 30px; /* Space below title */
 	}
 	&:nth-child(odd){
 		background:@sectionColor;
@@ -312,8 +357,9 @@ nav{
 			margin:10px 0;
 			box-shadow:1px 1px 10px -4px rgba(0,0,0,.3);
 			border:0;
-			border-radius: 5px;
-			transition:box-shadow .5s;
+			border-radius: 8px; /* Rounded corners */
+            padding: 22px; /* More padding */
+			transition:transform 0.3s ease-in-out, box-shadow .5s; /* Added transform for hover */
 			&.imp{
 				border-left: 8px solid @primaryColor;
 			}
@@ -321,7 +367,8 @@ nav{
 				max-width: 100%;
 			}
 			&:not(.collection-header):hover{
-				box-shadow:2px 3px 10px -3px rgba(0,0,0,.4);
+				box-shadow:2px 3px 15px -3px rgba(0,0,0,.4); /* Stronger shadow on hover */
+                transform: translateY(-5px); /* Lift effect */
 			}
 		}
 	}
@@ -331,6 +378,8 @@ nav{
 	img{
 		width: 100%;
 		max-height: 500px;
+        object-fit: cover;
+        border-radius: 10px; /* Rounded images */
 	}
 	.contents{
 		position: relative;
@@ -356,9 +405,11 @@ nav{
 	}
 	.department{
 		position: relative;
-		border-radius: 5px;
+		border-radius: 10px; /* Rounded corners */
 		overflow: hidden;
-		box-shadow: 2px 2px 10px -2px #888;
+		box-shadow: 2px 2px 12px -3px rgba(0,0,0,.4);
+        transition: transform 0.3s ease-in-out, box-shadow 0.5s;
+
 		.overlay-link{
 			position:absolute;
 			width:100%;
@@ -375,22 +426,34 @@ nav{
 			text-align:center;
 			top:0;
 			left:0;
-			background:rgba(18, 31, 105, 0.9);
-			color:#fff;
-			transform:scale(.7,.7);
+			background:linear-gradient(45deg, fade(@navbarGradientStart, 90%), fade(@navbarGradientEnd, 90%)); /* Gradient overlay */
+			color:@textInverted;
+			transform:scale(.9);
 			opacity:0;
-			transition: opacity .5s, transform .5s;
+			transition: opacity .4s ease-out, transform .4s ease-out;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
 			b{
-				color:#fff;
+				color:@textInverted;
+                margin-bottom: 10px;
+                font-size: 1.2em;
 			}
 			p{
 				width:95%;
+                font-size: 0.9em;
+                margin: 0 auto;
 			}
 		}
 		&:hover .description{
 			opacity:1;
-			transform:scale(1,1);
+			transform:scale(1);
 		}
+        &:hover {
+            box-shadow: 4px 4px 20px -2px rgba(0,0,0,.5);
+            transform: translateY(-10px);
+        }
 	}
 }
 
@@ -401,6 +464,10 @@ nav{
 		padding-top:50px;
 		.info{
 			margin: 15px 0;
+            transition: transform 0.3s ease-out;
+            &:hover {
+                transform: translateX(10px);
+            }
 		}
 		.ico{
 			display:inline-block;
@@ -408,11 +475,12 @@ nav{
 			margin-top:5px;
 			vertical-align:top;
 			color:@primaryColor;
+            font-size: 1.5em;
 		}
 		.data{
 			display:inline-block;
 			vertical-align:top;
-			color:#777;
+			color:@textPrimary;
 			p{
 				margin: 0;
 			}
@@ -423,59 +491,87 @@ nav{
 
 #map iframe{
 	display:block;
+    border-radius: 10px;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.1);
 }
 
 #footer{
-	background:@sectionColor;
-	color:#fff;
+	background: linear-gradient(90deg, @navbarGradientStart, @navbarGradientEnd);
+	color:@textInverted;
 	ul li{
 		margin:10px 0;
 		a{
-			font-size:18px;
+			font-size:16px;
 			text-transform:uppercase;
+            color: @textInverted;
+            transition: color 0.3s ease, transform 0.3s ease;
+            &:hover {
+                color: lighten(@textInverted, 10%);
+                transform: translateX(5px);
+            }
 		}
 	}
 }
 
 #copyright{
-	background: @primaryColor;
-	padding: 10px;
+	background: darken(@navbarGradientStart, 10%);
+	padding: 15px;
 	text-align: center;
 	color: #fff;
+    font-size: 0.9em;
 }
 
 .slick-dots{
-	bottom: 2px !important;
+	bottom: 15px !important; /* Adjust dot position */
+    li button:before {
+        font-size: 10px; /* Larger dots */
+        color: rgba(255,255,255,0.6);
+        transition: color 0.3s ease;
+    }
+    li.slick-active button:before {
+        color: @textInverted; /* Active dot color */
+    }
 }
 
 
 .page-contents{
-	background: #fff;
+	background: @background;
 	margin: 30px auto;
+    border-radius: 10px;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.1);
 	.title{
-		padding: 20px 0;
+		padding: 42px 0; /* Consistent padding */
+        border-bottom: 1px solid @lightGrey;
+        margin-bottom: 20px;
 	}
 	.contents{
 		padding: 20px 30px;
 		p,ul,table{
 			margin: 20px 0;
+            line-height: 1.8;
+            color: @textPrimary;
 		}
 		table{
 			thead{
 				background: @primaryColor;
-				color: #fff;
+				color: @textInverted;
 			}
 			tbody{
 				tr{
 					td{
 						padding:15px 10px;
+                        border-bottom: 1px solid lighten(@lightGrey, 5%);
 					}
 					&:nth-child(odd){
 						background: @sectionColor;
 					}
 					&:nth-child(even){
-						background: @lightGreenGray;
+						background: lighten(@extraLightGreen, 5%);
 					}
+                    &:hover {
+                        background: lighten(@secondaryColor, 45%);
+                        transition: background 0.3s ease;
+                    }
 				}
 			}
 		}
@@ -489,14 +585,20 @@ nav{
 	  padding: 15px;
 	  margin-left: 0 !important;
 	  .box{
-		  border-radius: 5px;
+		  border-radius: 10px; /* Rounded corners */
 		  overflow: hidden;
-		  box-shadow: 2px 2px 10px -1px rgba(0,0,0,.2);
+		  box-shadow: 2px 2px 12px -3px rgba(0,0,0,.3);
 		  position: relative;
+		  transition: transform 0.3s ease-in-out, box-shadow 0.5s;
 		  .image img{
 			  width: 100%;
 			  display: block;
+              filter: grayscale(20%);
+              transition: filter 0.3s ease;
 		  }
+          &:hover .image img {
+              filter: grayscale(0%);
+          }
 		  .overlay{
 			  display: flex;
 			  justify-content: center;
@@ -505,11 +607,11 @@ nav{
 			  width: 100%;
 			  height: 100%;
 			  top: 100%;
-			  transition: top .35s;
-			  background: @secondaryColor;
-			  color: @alternateFont;
-			  font-size: 2em;
-			  opacity: .6;
+			  transition: top .4s ease-out;
+			  background: linear-gradient(135deg, fade(@navbarGradientStart, 90%), fade(@navbarGradientEnd, 90%));
+			  color: @textInverted;
+			  font-size: 2.2em;
+			  opacity: .9;
 		  }
 		  .overlay-link{
 			  position: absolute;
@@ -520,21 +622,22 @@ nav{
 			  color: transparent;
 		  }
 		  .description{
-			  background: @secondaryColor;
+			  background: @primaryColor;
 			  position: absolute;
 			  width: 100%;
-			  color: @alternateFont;
+			  color: @textInverted;
 			  bottom: 0;
-			  padding: 10px;
-			  transition: opacity .35s;
+			  padding: 15px;
+			  transition: opacity .35s ease-out;
 			  p{
 				  margin: 0;
 				  &.name{
 					  font-weight: bold;
+                      font-size: 1.1em;
 				  }
 				  &.detail{
 					  font-size: 0.9em;
-					  color: darken(@alternateFont,5%);
+					  color: lighten(@textInverted, 10%);
 				  }
 			  }
 		  }
@@ -545,6 +648,8 @@ nav{
 			  .description {
 				  opacity: 0;
 			  }
+              box-shadow: 4px 4px 20px -2px rgba(0,0,0,.4);
+              transform: translateY(-10px);
 		  }
 	  }
   }
@@ -555,22 +660,32 @@ nav{
 		margin: 0 !important;
 	}
 	li{
-		padding: 20px 10px;
+		padding: 20px 15px;
 		background: lighten(@lightGrey,5%);
+        border-radius: 5px;
+        margin-bottom: 8px;
+        transition: background 0.3s ease, transform 0.3s ease;
 		&:nth-child(even){
-			background: lighten(@lightGreenGray,5%);
+			background: lighten(@extraLightGreen,5%);
 		}
+        &:hover {
+            background: lighten(@secondaryColor, 40%);
+            transform: translateX(5px);
+        }
 	}
 	.header{
 		i{
-			color: @secondaryColor;
-			margin-right: 5px;
+			color: @primaryColor;
+			margin-right: 8px;
+            font-size: 1.1em;
 		}
 		font-weight: bold;
-		font-size: 1em;
+		font-size: 1.1em;
+        color: @textBold;
 	}
 	.value{
 		margin-left: 30px !important;
+        color: @textPrimary;
 	}
 	div.value{
 		margin-top: 10px !important;
@@ -580,39 +695,40 @@ nav{
 
 @media only screen and (max-width:992px){
 	p{
-		line-height: 1.4;
+		line-height: 1.6; /* Adjusted for smaller screens */
 		font-size: .9em;
 	}
 	h1{
-		font-size: 2rem;
+		font-size: 2.5rem; /* Adjusted for smaller screens */
 	}
 
 	h2{
-		font-size: 1.8rem;
+		font-size: 2.2rem;
 	}
 
 	h3{
-		font-size: 1.5rem;
+		font-size: 1.8rem;
 	}
 
 	h4{
-		font-size: 1.3rem;
+		font-size: 1.5rem;
 	}
 
 	h5{
-		font-size: 1.2rem;
+		font-size: 1.3rem;
 	}
 
 	h6{
 		font-size: 1.1rem;
 	}
 	.page-contents .contents{
-		padding: 5px;
+		padding: 10px; /* More padding for mobile */
 	}
 	#departments .department .description{
 		position: relative;
 		opacity: 1;
 		transform: none;
+        background: linear-gradient(180deg, fade(@navbarGradientStart, 90%), fade(@navbarGradientEnd, 90%));
 	}
 	.page-contents .properties li{
 		margin-left: 0;
@@ -624,9 +740,9 @@ nav{
 		font-size: 2em;
 	}
 	h3{
-		font-size: 1.9em;
+		font-size: 1.8em;
 	}
 	h4{
-		font-size: 1.75em;
+		font-size: 1.6em;
 	}
 }

@@ -1,15 +1,16 @@
+/* trunk.css */
 @cMaxWidth : 1280px;
 // Responsive break points
 @m1 : 601px;
 @m2 : 993px;
 @m3 : 1201px;
 
-// Colors
+// Colors - Updated to reflect new gradient and consistency
 @lightColor : #cacaca;
-@btnPrimary : #4caf50;
-@btnSecondary : #2196f3;
+@btnPrimary : @primaryColor; /* Use primaryColor for primary button */
+@btnSecondary : @secondaryColor; /* Use secondaryColor for secondary button */
 @btnDanger : #f44336;
-@linkColor : #2196f3;
+@linkColor : @secondaryColor; /* Use secondaryColor for links */
 
 
 .create-col(@n, @prefix, @i: 1) when (@i =< @n) {
@@ -28,6 +29,10 @@
 a {
 	color: @linkColor;
 	text-decoration: none;
+    transition: color 0.3s ease; /* Smooth transition for links */
+    &:hover {
+        color: darken(@linkColor, 10%);
+    }
 }
 
 .full-width{
@@ -49,59 +54,64 @@ label{
 	}
 }
 input[type="email"], input[type="number"], input[type="search"], input[type="text"], input[type="tel"], input[type="url"], input[type="password"], textarea, select{
-	padding: 7px 10px;
-	border-radius: 5px;
-	border: 1px solid @lightColor;
+	padding: 10px 15px; /* More padding */
+	border-radius: 8px; /* Rounded input fields */
+	border: 2px solid @lightColor; /* Thicker border */
 	outline: 0;
 	box-shadow: none;
 	font: inherit;
 	max-width: 100%;
-	height: 40px;
+	height: auto; /* Allow height to adjust */
+	min-height: 45px; /* Minimum height for inputs */
 	&:focus{
-		border-color: @linkColor;
+		border-color: @primaryColor; /* Highlight with primary color on focus */
+        outline: none;
 	}
+    transition: border-color 0.3s ease;
 }
 
 textarea{
 	height: auto;
-	min-height: 70px;
+	min-height: 100px; /* Taller textarea */
 }
 
 .btn{
 	display: inline-block;
 	vertical-align: middle;
-	height: 40px;
-	line-height: 40px;
-	padding: 0px 20px;
-	border-radius: 5px;
+	height: auto; /* Allow height to adjust */
+	line-height: normal;
+	padding: 10px 25px; /* More padding */
+	border-radius: 8px; /* Rounded buttons */
 	background: #fff;
-	border-radius: 5px;
-	color: inherit;
-	border: 1px solid darken(@lightColor,10%);
+	border-radius: 8px;
+	color: @textBold; /* Default text color for button */
+	border: 2px solid darken(@lightColor,10%); /* Thicker border */
 	outline: 0;
 	cursor: pointer;
 	text-decoration: none;
-	font-size: 12px;
+	font-size: 14px; /* Slightly larger font */
 	font-family: inherit;
-	transition: background .25s;
-	background: #fff;
+	transition: all 0.3s ease; /* Smooth transition for all properties */
+	
 	&.primary{
 		background: @btnPrimary;
-		color: #fff;
+		color: @textInverted;
 		border-color: @btnPrimary;
 	}
 	&.secondary{
-		color: #fff;
+		color: @textInverted;
 		background: @btnSecondary;
 		border-color: @btnSecondary;
 	}
 	&.danger{
 		background: @btnDanger;
-		color: #fff;
+		color: @textInverted;
 		border-color: @btnDanger;
 	}
 	&:hover{
 		background: darken(#fff,5%);
+        transform: translateY(-3px); /* Lift effect */
+        box-shadow: 0 5px 15px rgba(0,0,0,0.2);
 		&.primary{
 			background: darken(@btnPrimary,5%);
 		}
@@ -117,7 +127,7 @@ textarea{
 .container{
 	max-width: @cMaxWidth;
 	margin: 0 auto;
-	width: 95%;
+	width: 90%; /* Slightly wider container */
 }
 
 .row {
@@ -165,22 +175,22 @@ textarea{
 		.create-col(12,~"l");
 	}
 	h1{
-		font-size: 4em;
+		font-size: 4.5em; /* Larger headings for desktop */
 	}
 	h2{
-		font-size: 3em;
+		font-size: 3.5em;
 	}
 	h3{
-		font-size: 2.8em;
+		font-size: 3em;
 	}
 	h4{
-		font-size: 2.2em;
+		font-size: 2.5em;
 	}
 	h5{
-		font-size: 1.9em;
+		font-size: 2em;
 	}
 	h6{
-		font-size: 1.4em;
+		font-size: 1.6em;
 	}
 }
 

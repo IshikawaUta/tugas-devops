@@ -1,7 +1,20 @@
+/* header.css */
 @import "color";
+
+.main-content {
+    margin-top: 80px; /* Sesuaikan nilai ini dengan tinggi navbar Anda */
+    /* Atau jika navbar Anda fixed, pastikan ada padding-top pada body atau elemen utama */
+}
+
+/* Atau jika navbar fixed, Anda mungkin perlu padding-top pada body */
+body {
+    padding-top: 80px; /* Sesuaikan dengan tinggi navbar */
+}
 
 .top {
     padding: 20px 20px 10px;
+    background: @background; /* Keep top bar white or light */
+    box-shadow: 0 2px 5px rgba(0,0,0,0.05); /* Subtle shadow */
 
     & > .row {
         margin-bottom: 0;
@@ -19,6 +32,8 @@
             position: absolute;
             top: 15px;
             left: 10px;
+            color: @primaryColor; /* Use primary color for icons */
+            font-size: 1.2em;
         }
 
         & > div {
@@ -36,6 +51,7 @@
                     letter-spacing: 1px;
                     text-transform: uppercase;
                     margin-bottom: 10px;
+                    color: @textBold; /* Stronger color for props */
                 }
 
                 p {
@@ -47,8 +63,10 @@
 }
 
 nav {
-
     position: relative;
+    background: linear-gradient(90deg, @navbarGradientStart, @navbarGradientEnd); /* Blue-purple gradient */
+    box-shadow: 0 4px 10px rgba(0,0,0,0.2); /* More prominent shadow for navbar */
+    z-index: 1000; /* Ensure navbar is on top */
 
     .home-navlink{
         position: absolute;
@@ -78,7 +96,6 @@ nav {
         display: none;
     }
 
-
     .nav {
         height: 64px;
         line-height: 64px;
@@ -94,18 +111,23 @@ nav {
                 position: relative;
                 padding: 0;
                 margin: 0;
+                transition: background 0.3s ease;
 
                 &:hover{
-                    background: darken(@primaryColor,3%);
+                    background: rgba(255,255,255,0.1); /* Subtle white overlay on hover */
                 }
 
                 a {
                     color: @textInverted;
-                    padding: 0 15px;
+                    padding: 0 20px; /* More padding */
                     display: inline-block;
+                    font-weight: 600;
+                    text-transform: uppercase;
+                    transition: background 0.3s ease, color 0.3s ease;
 
                     &:hover, &.active{
-                        background: darken(@primaryColor,3%);
+                        background: rgba(255,255,255,0.15); /* Stronger white overlay on hover/active */
+                        color: lighten(@textInverted, 10%);
                     }
                 }
 
@@ -114,26 +136,30 @@ nav {
                     position: absolute;
                     z-index: 10;
                     text-align: left;
-                    width: 220px;
-                    background: @primaryColor;
+                    width: 240px; /* Slightly wider dropdown */
+                    background: darken(@navbarGradientStart, 5%); /* Darker shade of gradient start */
                     top: 100%;
                     list-style: none;
                     padding: 0;
                     line-height: normal;
+                    border-radius: 0 0 8px 8px; /* Rounded bottom corners */
+                    overflow: hidden;
+                    box-shadow: 0 5px 15px rgba(0,0,0,0.3);
 
                     li {
                         display: block;
                         padding: 0;
 
                         a {
-                            padding: 15px;
+                            padding: 15px 20px; /* Consistent padding */
                             display: block;
-                            background: @primaryColor;
-                            transition: background 0.25s;
+                            background: transparent; /* Transparent for gradient effect */
+                            transition: background 0.25s ease, color 0.25s ease;
                             margin: 0;
 
                             &:hover, &.active {
-                                background: darken(@primaryColor,5%);
+                                background: rgba(0,0,0,0.1); /* Darker overlay on hover */
+                                color: lighten(@textInverted, 15%);
                             }
                         }
                     }
@@ -142,6 +168,7 @@ nav {
                 &:hover {
                     ul {
                         display: block;
+                        animation: fadeInDown 0.3s ease-out; /* Dropdown animation */
                     }
                 }
             }
@@ -159,6 +186,7 @@ div[role="navigation"]{
 	max-width: 75%;
     background: @background;
     font-size: 18px;
+    box-shadow: 2px 0 10px rgba(0,0,0,0.2); /* Shadow for sidebar */
 
 	.sidebar-contents{
 		text-align: left;
@@ -167,6 +195,7 @@ div[role="navigation"]{
 		.logo{
             display: inline-block;
             padding: 22px;
+            border-bottom: 1px solid @lightGrey; /* Separator for logo */
 
 			img{
 				width: 50%;
@@ -186,11 +215,18 @@ div[role="navigation"]{
 
                 a{
                     color: @textPrimary;
-                    display: inline-block;
-                    padding: 12px 22px;
+                    display: block; /* Make links block level */
+                    padding: 15px 22px; /* More padding */
+                    transition: background 0.3s ease, color 0.3s ease;
 
+                    &:hover{
+                        background: @sectionColor; /* Light background on hover */
+                        color: @primaryColor;
+                    }
                     &.active{
                         color: @primaryColor;
+                        background: lighten(@sectionColor, 2%); /* Slightly darker active background */
+                        font-weight: bold;
                     }
                 }
 			}
@@ -198,6 +234,8 @@ div[role="navigation"]{
 
         .contact{
             padding: 22px;
+            border-top: 1px solid @lightGrey; /* Separator for contact info */
+            margin-top: 20px;
 
             .col{
                 margin: 22px 0;
@@ -208,6 +246,7 @@ div[role="navigation"]{
                 margin-left: 12px;
                 font-weight: 700;
                 letter-spacing: 1px;
+                color: @textBold; /* Stronger color */
 
                 & + div{
                     padding-left: 12px;
@@ -215,6 +254,17 @@ div[role="navigation"]{
             }
         }
 	}
+}
+
+@keyframes fadeInDown {
+    from {
+        opacity: 0;
+        transform: translateY(-20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
 }
 
 @media only screen and (max-width: 900px) {
@@ -229,8 +279,11 @@ div[role="navigation"]{
         padding: 12px 0;
         text-align: center;
         left: 0;
+        background: linear-gradient(90deg, @navbarGradientStart, @navbarGradientEnd); /* Gradient for mobile navbar */
+        box-shadow: 0 2px 5px rgba(0,0,0,0.1);
 
         img{
+            margin-left: 10.5rem;
             height: 32px;
         }
     }
@@ -244,6 +297,7 @@ div[role="navigation"]{
 
         a{
             color: @textInverted;
+            font-size: 1.5em; /* Larger icon for mobile menu */
         }
     }
 }

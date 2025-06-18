@@ -1,3 +1,4 @@
+/* announcements.less */
 @import "color.less";
 
 .announcements {
@@ -17,9 +18,9 @@
                 padding: 22px;
                 box-shadow: 1px 1px 10px -4px rgba(0,0,0,.3);
                 border: 0;
-                border-radius: 5px;
+                border-radius: 8px; /* Slightly more rounded */
                 background: @background;
-                transition: box-shadow 0.5s;
+                transition: transform 0.3s ease-in-out, box-shadow 0.5s; /* Added transform for hover */
 
                 &.imp {
                     border-left: 8px solid @primaryColor;
@@ -35,7 +36,8 @@
                 }
 
                 &:not(.collection-header):hover {
-                    box-shadow: 2px 3px 10px -3px rgba(0,0,0,.4);
+                    box-shadow: 2px 3px 15px -3px rgba(0,0,0,.5); /* Stronger shadow on hover */
+                    transform: translateY(-5px); /* Lift effect */
                 }
             }
         }

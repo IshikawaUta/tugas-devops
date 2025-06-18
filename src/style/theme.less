@@ -1,10 +1,12 @@
+/* theme.less */
 @import "trunk";
 @import "color";
 
 body {
-	font-family: 'Source Sans Pro', sans-serif;
+	font-family: 'Quicksand', sans-serif; /* Mengubah font menjadi Quicksand */
 	color: @textPrimary;
 	font-size: 18px;
+    line-height: 1.7; /* Improved readability */
 }
 
 body.page {
@@ -17,32 +19,33 @@ h3,
 h4,
 h5,
 h6 {
-	font-weight: 700;
+	font-weight: 700; /* Quicksand memiliki weight 400, 500, 700. Gunakan 700 untuk bold. */
 	color: @textBold;
+    margin-bottom: 15px; /* Add margin to headings */
 }
 
 h1 {
-	font-size: 3rem;
+	font-size: 3.5rem; /* Slightly larger */
 }
 
 h2 {
-	font-size: 2.7rem;
+	font-size: 3rem; /* Slightly larger */
 }
 
 h3 {
-	font-size: 2rem;
+	font-size: 2.5rem; /* Slightly larger */
 }
 
 h4 {
-	font-size: 1.8rem;
+	font-size: 2rem;
 }
 
 h5 {
-	font-size: 1.5rem;
+	font-size: 1.8rem;
 }
 
 h6 {
-	font-size: 1.1rem;
+	font-size: 1.4rem;
 }
 
 b {
@@ -54,11 +57,11 @@ b {
 }
 
 strong {
-	font-weight: bold;
+	font-weight: 700; /* Pastikan strong juga menggunakan weight 700 */
 }
 
 ol {
-	padding: 0 0 0 15px;
+	padding: 0 0 0 20px; /* More padding */
 }
 
 p, ul, ol {
@@ -67,10 +70,13 @@ p, ul, ol {
 
 img {
 	max-width: 100%;
+    height: auto;
+    display: block;
 }
 
 .font-2 {
-	font-size: 1.2em;
+	font-size: 1.3em; /* Slightly larger */
+    font-weight: 600;
 }
 
 .v-center {
@@ -102,14 +108,15 @@ img {
 }
 
 .section {
-	padding: 86px 0;
+	padding: 60px 0; /* Adjusted padding */
 
 	.contents {
-		padding-top: 64px;
+		padding-top: 50px; /* Adjusted padding */
 	}
 
 	.title {
 		text-align: center;
+        margin-bottom: 30px;
 	}
 
 	&:nth-child(even) {
@@ -148,18 +155,23 @@ ul{
 }
 
 .btn{
-	font-size: 13px;
-	border: 1px solid @primaryColor;
-	border-radius: 4px;
+	font-size: 14px; /* Slightly larger font */
+	border: 2px solid @primaryColor; /* Thicker border */
+	border-radius: 8px; /* Rounded corners */
 	height: auto;
 	line-height: normal;
-	padding: 8px 20px;
-	transition: background .25s, color .25s;
+	padding: 10px 25px; /* More padding */
+	transition: all 0.3s ease; /* Smooth transition */
+    font-weight: 600;
+    color: @primaryColor;
+    background: transparent;
 }
 
 .btn:hover{
 	background: @primaryColor;
 	color: #fff;
+    transform: translateY(-3px); /* Lift effect */
+    box-shadow: 0 5px 15px rgba(0,0,0,0.2);
 }
 
 .input-field{
@@ -167,15 +179,22 @@ ul{
 
 	label{
 		font-size: 16px;
+        color: @textBold; /* Stronger label color */
+        margin-bottom: 5px;
+        display: block;
 	}
 
 	input, textarea{
 		width: 100%;
-		border: 1px solid rgba(0,0,0,.2);
-
+		border: 2px solid @lightGrey; /* Thicker border */
+        border-radius: 8px; /* Rounded input fields */
+        padding: 10px 15px; /* More padding */
+        font-size: 16px;
 		&:hover, &:active, &:focus{
-			border: 1px solid @primaryColor;
+			border: 2px solid @primaryColor; /* Highlight on hover/focus */
+            outline: none;
 		}
+        transition: border-color 0.3s ease;
 	}
 }
 
@@ -201,11 +220,12 @@ ul{
 .badge{
 	display: inline-block;
 	vertical-align: middle;
-	padding: 0px 6px;
+	padding: 4px 10px; /* More padding */
 	background: @primaryColor;
 	color: #fff;
-	border-radius: 4px;
+	border-radius: 20px; /* Pill-shaped badge */
 	font-size: 14px;
+    font-weight: 600;
 }
 
 .p2{
@@ -233,21 +253,21 @@ ul{
 	}
 
 	h1{
-		font-size: 2.2em;
+		font-size: 2.5em;
 	}
 	h2{
-		font-size: 1.9em;
+		font-size: 2.2em;
 	}
 	h3{
-		font-size: 1.6em;
+		font-size: 1.9em;
 	}
 	h4{
-		font-size: 1.4em;
+		font-size: 1.7em;
 	}
 	h5{
-		font-size: 1.2em;
+		font-size: 1.5em;
 	}
 	h6{
-		font-size: 1.05em;
+		font-size: 1.3em;
 	}
 }

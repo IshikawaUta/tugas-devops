@@ -1,12 +1,18 @@
+/* single-page.css */
 @import 'color';
 
 .page-contents {
-    background: #fff;
+    background: @background;
     margin: 30px auto;
+    border-radius: 10px; /* Rounded corners for page content */
+    box-shadow: 0 5px 15px rgba(0,0,0,0.1); /* Subtle shadow */
 
     .title {
         padding: 42px 0;
         text-align: center;
+        color: @textBold;
+        border-bottom: 1px solid @lightGrey; /* Separator for title */
+        margin-bottom: 20px;
     }
     .contents {
         padding: 20px 30px;
@@ -14,12 +20,19 @@
 
         .btn{
             margin: 12px;
+            transition: all 0.3s ease; /* Smooth transition for buttons */
+            &:hover {
+                transform: scale(1.05); /* Slightly enlarge button on hover */
+                box-shadow: 0 5px 15px rgba(0,0,0,0.2);
+            }
         }
 
         p,
         ul,
         table {
             margin: 20px 0;
+            line-height: 1.8; /* Better readability */
+            color: @textPrimary;
         }
 
         .col {
@@ -28,22 +41,28 @@
 
         .font-2 {
             margin: 22px 0;
+            font-size: 1.3em; /* Slightly larger font */
+            font-weight: 600;
         }
 
         table {
             width: 100%;
             margin: 42px 0;
             border-collapse: collapse;
+            border-radius: 8px; /* Rounded corners for table */
+            overflow: hidden; /* Ensure rounded corners clip content */
+            box-shadow: 0 5px 15px rgba(0,0,0,0.1);
 
             thead {
-                background: #fff;
-                color: @primaryColor;
-                border: 2px solid @primaryColor;
-                border-width: 2px 0px;
+                background: @primaryColor; /* Primary color for table header */
+                color: @textInverted;
+                border: none; /* Remove border from thead */
 
                 tr {
                     th {
-                        padding: 12px;
+                        padding: 15px; /* More padding */
+                        text-align: left;
+                        font-weight: 700;
                     }
                 }
             }
@@ -51,6 +70,7 @@
                 tr {
                     td {
                         padding: 15px 10px;
+                        border-bottom: 1px solid lighten(@lightGrey, 5%); /* Subtle row separator */
                     }
 
                     &:nth-child(odd) {
@@ -58,6 +78,10 @@
                     }
                     &:nth-child(even) {
                         background: lighten(@extraLightGreen, 5%);
+                    }
+                    &:hover {
+                        background: lighten(@secondaryColor, 45%); /* Highlight row on hover */
+                        transition: background 0.3s ease;
                     }
                 }
             }
@@ -71,22 +95,33 @@
         margin: 0 !important;
     }
     li {
-        padding: 20px 10px;
+        padding: 20px 15px; /* More padding */
         background: lighten(@lightGrey, 5%);
+        border-radius: 5px; /* Rounded list items */
+        margin-bottom: 8px; /* Space between list items */
+        transition: background 0.3s ease, transform 0.3s ease;
+
         &:nth-child(even) {
             background: lighten(@extraLightGreen, 5%);
+        }
+        &:hover {
+            background: lighten(@secondaryColor, 40%); /* Highlight on hover */
+            transform: translateX(5px); /* Slide effect */
         }
     }
     .header {
         i {
-            color: @secondaryColor;
-            margin-right: 5px;
+            color: @primaryColor; /* Use primary color for icons */
+            margin-right: 8px;
+            font-size: 1.1em;
         }
         font-weight: bold;
-        font-size: 1em;
+        font-size: 1.1em;
+        color: @textBold;
     }
     .value {
         margin-left: 30px !important;
+        color: @textPrimary;
     }
     div.value {
         margin-top: 10px !important;
@@ -94,8 +129,10 @@
     }
 }
 
-@media only screen and (max-width: 901) {
+@media only screen and (max-width: 901px) { /* Adjusted breakpoint */
     .avatar-image {
         float: none;
+        display: block;
+        margin: 0 auto; /* Center image */
     }
 }
