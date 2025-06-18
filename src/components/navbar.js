@@ -2,14 +2,14 @@ import React from 'react';
 import { graphql, StaticQuery, Link } from 'gatsby';
 import marked from 'marked';
 import Sidebar from 'react-sidebar';
-import Navlinks from './navlinks';
-import Logo from './logos';
+import Navlinks from './navlinks.js';
+import Logo from './logos.js';
 import '../style/header.less';
 
 class Navbar extends React.Component {
     constructor(props) {
         super(props);
-        this.topBar = React.createRef();
+        this.topBar = React.createRef(); // Referensi ini mungkin tidak lagi diperlukan jika 'top' dihapus
         this.nav = React.createRef();
         this.navPlaceholder = React.createRef();
 
@@ -31,7 +31,8 @@ class Navbar extends React.Component {
     }
 
     componentDidMount() {
-        const topBarHeight = this.topBar.current.getBoundingClientRect().height;
+        // topBarHeight tidak lagi relevan jika .top dihapus, atau Anda perlu menyesuaikannya
+        // const topBarHeight = this.topBar.current.getBoundingClientRect().height;
         const nav = this.nav.current;
 
         if (window.innerWidth < 901) {
@@ -39,14 +40,19 @@ class Navbar extends React.Component {
             this.navPlaceholder.current.style.height =
                 nav.getBoundingClientRect().height + 'px';
         } else {
+            // Menambahkan event listener untuk efek "sticky" navbar
             window.addEventListener('scroll', function(e) {
                 const top =
                     window.pageYOffset || document.documentElement.scrollTop;
 
-                if (top >= topBarHeight) {
+                // Sesuaikan kondisi ini jika tidak ada top bar lagi
+                // Jika navbar selalu fixed atau Anda ingin menentukannya berdasarkan scroll tertentu
+                if (top >= 0) { // Misalnya, selalu fixed atau ketika sedikit scroll
                     nav.classList.add('fixed');
+                    nav.classList.add('fade-in-down');
                 } else {
                     nav.classList.remove('fixed');
+                    nav.classList.remove('fade-in-down');
                 }
             });
         }
@@ -56,71 +62,10 @@ class Navbar extends React.Component {
         const baseData = this.props.data;
         return (
             <div id="header">
-                <div className="top" ref={this.topBar}>
-                    <div className="row flex">
-                        <div className="col logo item s12 m3 l1">
-                            <Link to="/" title="Home">
-                                <Logo type="logo" />
-                            </Link>
-                        </div>
-                        <div className="col ph item s6 m1 l2" />
-                        <div className="col ph item s6 m2 l2">
-                            <i className="fa fa-phone color-primary" />
-                            <div>
-                                <div className="prop color-primary">
-                                    Contact
-                                </div>
-                                <div
-                                    dangerouslySetInnerHTML={{
-                                        __html: baseData.allBaseYaml.edges[0].node.data.phone.join(
-                                            '<br/>'
-                                        )
-                                    }}
-                                />
-                                <a
-                                    href={`mailto: ${baseData.allBaseYaml.edges[0].node.data.email}`}
-                                >
-                                    {
-                                        baseData.allBaseYaml.edges[0].node.data
-                                            .email
-                                    }
-                                </a>
-                            </div>
-                        </div>
-                        <div className="col address item s6 m3 l2">
-                            <i className="fa fa-map-marker color-primary" />
-                            <div>
-                                <div className="prop color-primary">
-                                    Address
-                                </div>
-                                <div
-                                    dangerouslySetInnerHTML={{
-                                        __html: marked(
-                                            baseData.allBaseYaml.edges[0].node.data.address.replace(
-                                                /(?:\r\n|\r|\n)/g,
-                                                '<br/>'
-                                            )
-                                        )
-                                    }}
-                                />
-                            </div>
-                        </div>
-                        <div className="col address item s6 m3 l2">
-                            <i className="fa fa-whatsapp color-primary" />
-                            <div>
-                                <div className="prop color-primary">
-                                    Whatsapp
-                                </div>
-                                <div>
-                                    <p>{baseData.allBaseYaml.edges[0].node.data.code}</p>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
+                {/* Bagian 'top' yang berisi info kontak dan logo utama sebelumnya telah dihapus */}
                 <nav className="bg-primary" ref={this.nav}>
-                    <Link to="/" className="home-navlink" title="Home">
-                        <Logo type="mobLogo" />
+                    <Link to="/" className="home-navlink" title="Beranda">
+                        <Logo type="logo" /> {/* Logo dipindahkan di sini */}
                     </Link>
                     <div className="mobile">
                         <a href="#menu" onClick={this.menuOpen}>
@@ -187,19 +132,19 @@ function SidebarContents({ data }) {
             <div className="contact">
                 <div className="col">
                     <i className="fa fa-phone color-primary" />
-                    <p className="prop color-primary">Phone</p>
+                    <p className="prop color-primary">Telepon</p>
                     <div
                         dangerouslySetInnerHTML={{
                             __html: data.phone.join('<br/>')
                         }}
                     />
-                    <a className="text-primary" href={'mailto:' + data.email}>
+                    <a className="text-primary transition duration-300 ease-in-out hover:text-secondaryColor" href={'mailto:' + data.email}>
                         {data.email}
                     </a>
                 </div>
                 <div className="col">
                     <i className="fa fa-map-marker color-primary" />
-                    <p className="prop color-primary">Address</p>
+                    <p className="prop color-primary">Alamat</p>
                     <div
                         dangerouslySetInnerHTML={{
                             __html: marked(
@@ -229,8 +174,8 @@ export default () => (
                             data {
                                 phone
                                 address
-                                email         
-                                code                       
+                                email
+                                code
                             }
                         }
                     }
