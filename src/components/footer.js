@@ -37,7 +37,7 @@ export default () => {
             <div id="footer" className="section">
                 <div className="container">
                     <div className="title">
-                        <h2>Tautan Langsung</h2>
+                        <h2 style={{ "color" : "white"}}>Tautan Langsung</h2>
                     </div>
                     <div className="contents">
                         <div className="row">
