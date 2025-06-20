@@ -1,6 +1,6 @@
 ---
-title: Guest Teacher
-image: ./guest-teacher-1.jpg
+title: Hari Pahlawan
+image: ./hari-pahlawan.jpg
 template: singlepage
 description:  Peringatan Hari Pahlawan & Hari Guru di SMK BIMA KUTA BUMI
 ---
@@ -13,6 +13,6 @@ Dengan mengenakan pakaian bernuansa putih dan hitam, para siswa menunjukkan pena
 
 [row]
 [col]
-![hari batik](./hari-batik.png)
+![hari pahlawan](./hari-pahlawan.jpg)
 [/col]
 [/row]
